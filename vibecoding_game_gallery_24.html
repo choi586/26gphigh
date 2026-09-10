@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>바이브코딩 게임 전시회</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Noto Sans KR", Arial, sans-serif;
+      background: #ffffff;
+      color: #171717;
+    }
+
+    .page {
+      width: min(1200px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 64px 0 80px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(28px, 4vw, 42px);
+      letter-spacing: -0.04em;
+    }
+
+    .hero p {
+      margin: 0;
+      color: #6b6b6b;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .game-card {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+      border: 1px solid #e8e8e8;
+      border-radius: 22px;
+      overflow: hidden;
+      background: #fff;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .game-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+
+    .poster-placeholder {
+      aspect-ratio: 4 / 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background:
+        linear-gradient(135deg, #f7f7f7 25%, #fbfbfb 25%, #fbfbfb 50%, #f7f7f7 50%, #f7f7f7 75%, #fbfbfb 75%);
+      background-size: 28px 28px;
+      color: #8a8a8a;
+      text-align: center;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .poster-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .game-info {
+      padding: 20px 22px 24px;
+    }
+
+    .game-info h2 {
+      margin: 0 0 8px;
+      font-size: 21px;
+      letter-spacing: -0.03em;
+    }
+
+    .student {
+      margin: 0 0 8px;
+      font-size: 14px;
+      color: #444;
+      font-weight: 600;
+    }
+
+    .description {
+      margin: 0;
+      color: #777;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    @media (max-width: 900px) {
+      .game-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        width: min(100% - 24px, 1200px);
+        padding-top: 40px;
+      }
+
+      .game-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <h1>바이브코딩 게임 전시회</h1>
+      <p>
+        학생들이 직접 만든 게임을 한곳에 모았습니다.<br>
+        각 카드를 클릭하면 해당 게임 페이지로 이동합니다.
+      </p>
+    </section>
+
+    <section class="game-grid">
+      
+      <!-- 학생 01 -->
+      <a class="game-card" href="https://choi586.github.io/web-shooter/" target="_blank" rel="noopener noreferrer">
+        <div class="poster-placeholder">
+          <span>이곳에 게임 포스터를 넣으세요</span>
+          <!-- 포스터를 넣을 때 위 문구를 지우고 아래처럼 사용하세요.
+          <img src="images/game01.png" alt="게임 01 포스터">
+          -->
+        </div>
+        <div class="game-info">
+          <h2>게임 제목 01</h2>
+          <p class="student">제작자 이름</p>
+          <p class="description">게임 소개를 한 줄로 입력하세요.</p>
+        </div>
+      </a>
+    
+      <!-- 학생 02 -->
+      <a class="game-card" href="#" target="_blank" rel="noopener noreferrer">
+        <div class="poster-placeholder">
+          <span>이곳에 게임 포스터를 넣으세요</span>
+          <!-- 포스터를 넣을 때 위 문구를 지우고 아래처럼 사용하세요.
+          <img src="images/game02.png" alt="게임 02 포스터">
+          -->
+        </div>
+        <div class="game-info">
+          <h2>게임 제목 02</h2>
+          <p class="student">제작자 이름</p>
+          <p class="description">게임 소개를 한 줄로 입력하세요.</p>
+        </div>
+      </a>
+    
+      <!-- 학생 03 -->
+      <a class="game-card" href="#" target="_blank" rel="noopener noreferrer">
+        <div class="poster-placeholder">
+          <span>이곳에 게임 포스터를 넣으세요</span>
+          <!-- 포스터를 넣을 때 위 문구를 지우고 아래처럼 사용하세요.
+          <img src="images/game03.png" alt="게임 03 포스터">
+          -->
+        </div>
+        <div class="game-info">
+          <h2>게임 제목 03</h2>
+          <p class="student">제작자 이름</p>
+          <p class="description">게임 소개를 한 줄로 입력하세요.</p>
+        </div>
+      </a>
+    
+      <!-- 학생 04 -->
+      <a class="game-card" href="#" target="_blank" rel="noopener noreferrer">
+        <div class="poster-placeholder">
+          <span>이곳에 게임 포스터를 넣으세요</span>
+          <!-- 포스터를 넣을 때 위 문구를 지우고 아래처럼 사용하세요.
+          <img src="images/game04.png" alt="게임 04 포스터">
+          -->
+        </div>
+        <div class="game-info">
+          <h2>게임 제목 04</h2>
+          <p class="student">제작자 이름</p>
+          <p class="description">게임 소개를 한 줄로 입력하세요.</p>
+        </div>
+      </a>
+    
+      <!-- 학생 05 -->
+      <a class="game-card" href="#" target="_blank" rel="noopener noreferrer">
+        <div class="poster-placeholder">
+          <span>이곳에 게임 포스터를 넣으세요</span>
+          <!-- 포스터를 넣을 때 위 문구를 지우고 아래처럼 사용하세요.
+          <img src="images/game05.png" alt="게임 05 포스터">
+          -->
+        </div>
+        <div class="game-info">
+          <h2>게임 제목 05</h2>
+          <p class="student">제작자 이름</p>
+          <p class="description">게임 소개를 한 줄로 입력하세요.</p>
+        </div>
+      </a>
+    
+      <!-- 학생 06 -->
+      <a class="game-card" href="#" target="_blank" rel="noopener noreferrer">
+        <div class="poster-placeholder">
+          <span>이곳에 게임 포스터를 넣으세요</span>
+          <!-- 포스터를 넣을 때 위 문구를 지우고 아래처럼 사용하세요.
+          <img src="images/game06.png" alt="게임 06 포스터">
+          -->
+        </div>
+        <div class="game-info">
+          <h2>게임 제목 06</h2>
+          <p class="student">제작자 이름</p>
+          <p class="description">게임 소개를 한 줄로 입력하세요.</p>
+        </div>
+      </a>
+    
+      <!-- 학생 07 -->
+      <a class="game-card" href="#" target="_blank" rel="noopener noreferrer">
+        <div class="poster-placeholder">
+          <span>이곳에 게임 포스터를 넣으세요</span>
+          <!-- 포스터를 넣을 때 위 문구를 지우고 아래처럼 사용하세요.
+          <img src="images/game07.png" alt="게임 07 포스터">
+          -->
+        </div>
+        <div class="game-info">
+          <h2>게임 제목 07</h2>
+          <p class="student">제작자 이름</p>
+          <p class="description">게임 소개를 한 줄로 입력하세요.</p>
+        </div>
+      </a>
+    
+      <!-- 학생 08 -->
+      <a class="game-card" href="#" target="_blank" rel="noopener noreferrer">
+        <div class="poster-placeholder">
+          <span>이곳에 게임 포스터를 넣으세요</span>
+          <!-- 포스터를 넣을 때 위 문구를 지우고 아래처럼 사용하세요.
+          <img src="images/game08.png" alt="게임 08 포스터">
+          -->
+        </div>
+        <div class="game-info">
+          <h2>게임 제목 08</h2>
+          <p class="student">제작자 이름</p>
+          <p class="description">게임 소개를 한 줄로 입력하세요.</p>
+        </div>
+      </a>
+    
+      <!-- 학생 09 -->
+      <a class="game-card" href="#" target="_blank" rel="noopener noreferrer">
+        <div class="poster-placeholder">
+          <span>이곳에 게임 포스터를 넣으세요</span>
+          <!-- 포스터를 넣을 때 위 문구를 지우고 아래처럼 사용하세요.
+          <img src="images/game09.png" alt="게임 09 포스터">
+          -->
+        </div>
+        <div class="game-info">
+          <h2>게임 제목 09</h2>
+          <p class="student">제작자 이름</p>
+          <p class="description">게임 소개를 한 줄로 입력하세요.</p>
+        </div>
+      </a>
+    
+      <!-- 학생 10 -->
+      <a class="game-card" href="#" target="_blank" rel="noopener noreferrer">
+        <div class="poster-placeholder">
+          <span>이곳에 게임 포스터를 넣으세요</span>
+          <!-- 포스터를 넣을 때 위 문구를 지우고 아래처럼 사용하세요.
+          <img src="images/game10.png" alt="게임 10 포스터">
+          -->
+        </div>
+        <div class="game-info">
+          <h2>게임 제목 10</h2>
+          <p class="student">제작자 이름</p>
+          <p class="description">게임 소개를 한 줄로 입력하세요.</p>
+        </div>
+      </a>
+    
+      <!-- 학생 11 -->
+      <a class="game-card" href="#" target="_blank" rel="noopener noreferrer">
+        <div class="poster-placeholder">
+          <span>이곳에 게임 포스터를 넣으세요</span>
+          <!-- 포스터를 넣을 때 위 문구를 지우고 아래처럼 사용하세요.
+          <img src="images/game11.png" alt="게임 11 포스터">
+          -->
+        </div>
+        <div class="game-info">
+          <h2>게임 제목 11</h2>
+          <p class="student">제작자 이름</p>
+          <p class="description">게임 소개를 한 줄로 입력하세요.</p>
+        </div>
+      </a>
+    
+      <!-- 학생 12 -->
+      <a class="game-card" href="#" target="_blank" rel="noopener noreferrer">
+        <div class="poster-placeholder">
+          <span>이곳에 게임 포스터를 넣으세요</span>
+          <!-- 포스터를 넣을 때 위 문구를 지우고 아래처럼 사용하세요.
+          <img src="images/game12.png" alt="게임 12 포스터">
+          -->
+        </div>
+        <div class="game-info">
+          <h2>게임 제목 12</h2>
+          <p class="student">제작자 이름</p>
+          <p class="description">게임 소개를 한 줄로 입력하세요.</p>
+        </div>
+      </a>
+    
+      <!-- 학생 13 -->
+      <a class="game-card" href="#" target="_blank" rel="noopener noreferrer">
+        <div class="poster-placeholder">
+          <span>이곳에 게임 포스터를 넣으세요</span>
+          <!-- 포스터를 넣을 때 위 문구를 지우고 아래처럼 사용하세요.
+          <img src="images/game13.png" alt="게임 13 포스터">
+          -->
+        </div>
+        <div class="game-info">
+          <h2>게임 제목 13</h2>
+          <p class="student">제작자 이름</p>
+          <p class="description">게임 소개를 한 줄로 입력하세요.</p>
+        </div>
+      </a>
+    
+      <!-- 학생 14 -->
+      <a class="game-card" href="#" target="_blank" rel="noopener noreferrer">
+        <div class="poster-placeholder">
+          <span>이곳에 게임 포스터를 넣으세요</span>
+          <!-- 포스터를 넣을 때 위 문구를 지우고 아래처럼 사용하세요.
+          <img src="images/game14.png" alt="게임 14 포스터">
+          -->
+        </div>
+        <div class="game-info">
+          <h2>게임 제목 14</h2>
+          <p class="student">제작자 이름</p>
+          <p class="description">게임 소개를 한 줄로 입력하세요.</p>
+        </div>
+      </a>
+    
+      <!-- 학생 15 -->
+      <a class="game-card" href="#" target="_blank" rel="noopener noreferrer">
+        <div class="poster-placeholder">
+          <span>이곳에 게임 포스터를 넣으세요</span>
+          <!-- 포스터를 넣을 때 위 문구를 지우고 아래처럼 사용하세요.
+          <img src="images/game15.png" alt="게임 15 포스터">
+          -->
+        </div>
+        <div class="game-info">
+          <h2>게임 제목 15</h2>
+          <p class="student">제작자 이름</p>
+          <p class="description">게임 소개를 한 줄로 입력하세요.</p>
+        </div>
+      </a>
+    
+      <!-- 학생 16 -->
+      <a class="game-card" href="#" target="_blank" rel="noopener noreferrer">
+        <div class="poster-placeholder">
+          <span>이곳에 게임 포스터를 넣으세요</span>
+          <!-- 포스터를 넣을 때 위 문구를 지우고 아래처럼 사용하세요.
+          <img src="images/game16.png" alt="게임 16 포스터">
+          -->
+        </div>
+        <div class="game-info">
+          <h2>게임 제목 16</h2>
+          <p class="student">제작자 이름</p>
+          <p class="description">게임 소개를 한 줄로 입력하세요.</p>
+        </div>
+      </a>
+    
+      <!-- 학생 17 -->
+      <a class="game-card" href="#" target="_blank" rel="noopener noreferrer">
+        <div class="poster-placeholder">
+          <span>이곳에 게임 포스터를 넣으세요</span>
+          <!-- 포스터를 넣을 때 위 문구를 지우고 아래처럼 사용하세요.
+          <img src="images/game17.png" alt="게임 17 포스터">
+          -->
+        </div>
+        <div class="game-info">
+          <h2>게임 제목 17</h2>
+          <p class="student">제작자 이름</p>
+          <p class="description">게임 소개를 한 줄로 입력하세요.</p>
+        </div>
+      </a>
+    
+      <!-- 학생 18 -->
+      <a class="game-card" href="#" target="_blank" rel="noopener noreferrer">
+        <div class="poster-placeholder">
+          <span>이곳에 게임 포스터를 넣으세요</span>
+          <!-- 포스터를 넣을 때 위 문구를 지우고 아래처럼 사용하세요.
+          <img src="images/game18.png" alt="게임 18 포스터">
+          -->
+        </div>
+        <div class="game-info">
+          <h2>게임 제목 18</h2>
+          <p class="student">제작자 이름</p>
+          <p class="description">게임 소개를 한 줄로 입력하세요.</p>
+        </div>
+      </a>
+    
+      <!-- 학생 19 -->
+      <a class="game-card" href="#" target="_blank" rel="noopener noreferrer">
+        <div class="poster-placeholder">
+          <span>이곳에 게임 포스터를 넣으세요</span>
+          <!-- 포스터를 넣을 때 위 문구를 지우고 아래처럼 사용하세요.
+          <img src="images/game19.png" alt="게임 19 포스터">
+          -->
+        </div>
+        <div class="game-info">
+          <h2>게임 제목 19</h2>
+          <p class="student">제작자 이름</p>
+          <p class="description">게임 소개를 한 줄로 입력하세요.</p>
+        </div>
+      </a>
+    
+      <!-- 학생 20 -->
+      <a class="game-card" href="#" target="_blank" rel="noopener noreferrer">
+        <div class="poster-placeholder">
+          <span>이곳에 게임 포스터를 넣으세요</span>
+          <!-- 포스터를 넣을 때 위 문구를 지우고 아래처럼 사용하세요.
+          <img src="images/game20.png" alt="게임 20 포스터">
+          -->
+        </div>
+        <div class="game-info">
+          <h2>게임 제목 20</h2>
+          <p class="student">제작자 이름</p>
+          <p class="description">게임 소개를 한 줄로 입력하세요.</p>
+        </div>
+      </a>
+    
+      <!-- 학생 21 -->
+      <a class="game-card" href="#" target="_blank" rel="noopener noreferrer">
+        <div class="poster-placeholder">
+          <span>이곳에 게임 포스터를 넣으세요</span>
+          <!-- 포스터를 넣을 때 위 문구를 지우고 아래처럼 사용하세요.
+          <img src="images/game21.png" alt="게임 21 포스터">
+          -->
+        </div>
+        <div class="game-info">
+          <h2>게임 제목 21</h2>
+          <p class="student">제작자 이름</p>
+          <p class="description">게임 소개를 한 줄로 입력하세요.</p>
+        </div>
+      </a>
+    
+      <!-- 학생 22 -->
+      <a class="game-card" href="#" target="_blank" rel="noopener noreferrer">
+        <div class="poster-placeholder">
+          <span>이곳에 게임 포스터를 넣으세요</span>
+          <!-- 포스터를 넣을 때 위 문구를 지우고 아래처럼 사용하세요.
+          <img src="images/game22.png" alt="게임 22 포스터">
+          -->
+        </div>
+        <div class="game-info">
+          <h2>게임 제목 22</h2>
+          <p class="student">제작자 이름</p>
+          <p class="description">게임 소개를 한 줄로 입력하세요.</p>
+        </div>
+      </a>
+    
+      <!-- 학생 23 -->
+      <a class="game-card" href="#" target="_blank" rel="noopener noreferrer">
+        <div class="poster-placeholder">
+          <span>이곳에 게임 포스터를 넣으세요</span>
+          <!-- 포스터를 넣을 때 위 문구를 지우고 아래처럼 사용하세요.
+          <img src="images/game23.png" alt="게임 23 포스터">
+          -->
+        </div>
+        <div class="game-info">
+          <h2>게임 제목 23</h2>
+          <p class="student">제작자 이름</p>
+          <p class="description">게임 소개를 한 줄로 입력하세요.</p>
+        </div>
+      </a>
+    
+      <!-- 학생 24 -->
+      <a class="game-card" href="#" target="_blank" rel="noopener noreferrer">
+        <div class="poster-placeholder">
+          <span>이곳에 게임 포스터를 넣으세요</span>
+          <!-- 포스터를 넣을 때 위 문구를 지우고 아래처럼 사용하세요.
+          <img src="images/game24.png" alt="게임 24 포스터">
+          -->
+        </div>
+        <div class="game-info">
+          <h2>게임 제목 24</h2>
+          <p class="student">제작자 이름</p>
+          <p class="description">게임 소개를 한 줄로 입력하세요.</p>
+        </div>
+      </a>
+    
+    </section>
+  </main>
+</body>
+</html>
